@@ -4,9 +4,9 @@
 public class Vehicle {
     private String sipp;
     private String name;
-    private float price;
+    private Float price;
     private String supplier;
-    private float rating;
+    private Float rating;
 
     public Vehicle(String sipp, String name, float price, String supplier, float rating) {
         this.sipp = sipp;
@@ -32,11 +32,11 @@ public class Vehicle {
         this.name = name;
     }
 
-    public float getPrice() {
+    public Float getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(Float price) {
         this.price = price;
     }
 
@@ -48,12 +48,29 @@ public class Vehicle {
         this.supplier = supplier;
     }
 
-    public float getRating() {
+    public Float getRating() {
         return rating;
     }
 
-    public void setRating(float rating) {
+    public void setRating(Float rating) {
         this.rating = rating;
+    }
+
+    public String getSpec() {
+        return String.format("%s - %s - %s", name, sipp, SIPPToString());
+    }
+
+    //TODO Write test
+    private String SIPPToString() {
+        StringBuilder builder = new StringBuilder();
+        int length = sipp.length();
+
+        for (int i = 0; i < length; i++) {
+            builder.append(SIPPHelper.toString(sipp.charAt(i), i));
+            if (i < length - 1) builder.append(" - ");
+        }
+
+        return builder.toString();
     }
 
     @Override
