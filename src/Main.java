@@ -24,6 +24,9 @@ public class Main {
             System.out.println("\n\n/*** calculate the specification of the vehicles based on their SIPP ***/\n");
             search.printVehiclesSpec();
 
+            System.out.println("\n\n/*** Print out the highest rated supplier per car type, descending order ***/\n");
+            search.printHighestRatedSupplier();
+
         }
     }
 }

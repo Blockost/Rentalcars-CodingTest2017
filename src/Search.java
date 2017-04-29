@@ -21,4 +21,13 @@ public class Search {
     public void printVehiclesSpec() {
         VehicleList.forEach(v -> System.out.println(v.getSpec()));
     }
+
+    public void printHighestRatedSupplier() {
+        VehicleList.sort(Comparator
+            .comparing(Vehicle::getCarType)
+            .thenComparing(Comparator.comparing(Vehicle::getRating).reversed()));
+
+        VehicleList.forEach(v -> System.out.format("%s - %s - %s - %.2f\n",
+            v.getName(), v.getCarType(), v.getSupplier(), v.getRating()));
+    }
 }

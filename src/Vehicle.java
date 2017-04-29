@@ -56,6 +56,10 @@ public class Vehicle {
         this.rating = rating;
     }
 
+    public String getCarType() {
+        return SIPPHelper.toString(sipp.charAt(0), 0);
+    }
+
     public String getSpec() {
         return String.format("%s - %s - %s", name, sipp, SIPPToString());
     }
