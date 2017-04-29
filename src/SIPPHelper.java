@@ -3,7 +3,6 @@
  */
 public class SIPPHelper {
 
-    //TODO Write test
     public static String toString(char letter, int position) {
         switch (letter) {
             case 'A':
@@ -28,7 +27,7 @@ public class SIPPHelper {
                 if (position == 0) return "Mini";
                 return "Manual";
             case 'N':
-                return "Petrol - no AC";
+                return "Petrol - No AC";
             case 'P':
                 if (position == 0) return "Premium";
                 return "Pick up";

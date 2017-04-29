@@ -60,7 +60,6 @@ public class Vehicle {
         return String.format("%s - %s - %s", name, sipp, SIPPToString());
     }
 
-    //TODO Write test
     private String SIPPToString() {
         StringBuilder builder = new StringBuilder();
         int length = sipp.length();
