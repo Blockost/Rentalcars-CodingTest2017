@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -11,7 +12,13 @@ public class Search {
         this.VehicleList = VehicleList;
     }
 
-    public List<Vehicle> getVehicleList() {
-        return VehicleList;
+    public void printVehiclesByPriceASC() {
+        VehicleList.sort(Comparator.comparing(Vehicle::getPrice));
+        VehicleList.forEach(v ->
+            System.out.format("%s - %.2f \n", v.getName(), v.getPrice()));
+    }
+
+    public void printVehiclesSpec() {
+        VehicleList.forEach(v -> System.out.println(v.getSpec()));
     }
 }
