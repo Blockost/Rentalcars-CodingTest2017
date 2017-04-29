@@ -12,14 +12,12 @@ public class Search {
         this.VehicleList = VehicleList;
     }
 
-    // TODO Write test
     public void printVehiclesByPriceASC() {
         VehicleList.sort(Comparator.comparing(Vehicle::getPrice));
         VehicleList.forEach(v ->
             System.out.format("%s - %.2f \n", v.getName(), v.getPrice()));
     }
 
-    // TODO Write test
     public void printVehiclesSpec() {
         VehicleList.forEach(v -> System.out.println(v.getSpec()));
     }
