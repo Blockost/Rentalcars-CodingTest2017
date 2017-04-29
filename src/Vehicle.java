@@ -7,6 +7,8 @@ public class Vehicle {
     private Float price;
     private String supplier;
     private Float rating;
+    private int score;
+    private Float sumScores;
 
     public Vehicle(String sipp, String name, float price, String supplier, float rating) {
         this.sipp = sipp;
@@ -14,6 +16,8 @@ public class Vehicle {
         this.price = price;
         this.supplier = supplier;
         this.rating = rating;
+        this.score = computeScore();
+        this.sumScores = this.score + this.rating;
     }
 
     public String getSipp() {
@@ -56,6 +60,22 @@ public class Vehicle {
         this.rating = rating;
     }
 
+    public int getScore() {
+        return score;
+    }
+
+    public Float getSumScores() {
+        return sumScores;
+    }
+
+    private int computeScore() {
+
+        int score = hasManualTransmission() ? 1 : 5;
+        if (hasAirCon()) score += 2;
+
+        return score;
+    }
+
     public String getCarType() {
         return SIPPHelper.toString(sipp.charAt(0), 0);
     }
@@ -76,6 +96,14 @@ public class Vehicle {
         return builder.toString();
     }
 
+    private boolean hasManualTransmission() {
+        return sipp.charAt(2) == 'M';
+    }
+
+    private boolean hasAirCon() {
+        return sipp.charAt(3) == 'R';
+    }
+
     @Override
     public String toString() {
         return "Vehicle{" +
@@ -86,4 +114,6 @@ public class Vehicle {
             ", rating=" + rating +
             '}';
     }
+
+
 }

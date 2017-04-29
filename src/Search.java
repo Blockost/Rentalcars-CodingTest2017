@@ -30,4 +30,13 @@ public class Search {
         VehicleList.forEach(v -> System.out.format("%s - %s - %s - %.2f\n",
             v.getName(), v.getCarType(), v.getSupplier(), v.getRating()));
     }
+
+    public void printVehiclesByScore() {
+        VehicleList.sort(Comparator.comparing(Vehicle::getSumScores).reversed());
+
+        VehicleList.forEach(v -> System.out.format("%s - %d - %.2f - %.2f\n",
+            v.getName(), v.getScore(), v.getRating(), v.getSumScores()));
+    }
+
+
 }
