@@ -1,7 +1,7 @@
 # Rentalcars-CodingTest2017
 
 ## Getting started
-### Using Maven
+### Using Maven
 
     mvn install
     mvn package
