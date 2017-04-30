@@ -1,3 +1,4 @@
 .idea/
 Rentalcars-CodingTest2017.iml
 target/
+/dependency-reduced-pom.xml
