@@ -3,6 +3,7 @@
 ## Getting started
 ### Using Maven
 
+    mvn install
     mvn package
     java -jar target/${jar_name}
     
