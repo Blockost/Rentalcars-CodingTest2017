@@ -8,10 +8,10 @@
     java -jar target/Rentalcars-CodingTest2017-1.0.jar
     
 or simply 
-    
-       mvn spring-boot:run
+
+    mvn spring-boot:run
        
-The RESTful web service should started in a second: 
+The RESTful web service should start in a second: 
 
       .   ____          _            __ _ _
      /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -50,18 +50,18 @@ The RESTful web service should started in a second:
     
 ### Routes
 
-When the server is fully started, you can browser to `localhost:8080/vehicles/` and try these 4 routes:
+When the server is fully started, you can browse to `localhost:8080/vehicles/` and try these 4 routes:
 
 - `/list`: Print a list of all the cars, in ascending price order
 - `/specs`: Print the vehicles' specification
 - `/suppliers`: Print out the highest rated supplier per car type, descending order
-- `/scores`: Print out a list of vehicles, ordered by the sum of the scores in descending order,
+- `/scores`: Print out a list of vehicles, ordered by the sum of the scores in descending order
     
 ## Tools
 - IntelliJ IDEA
 - Apache Maven 3.3.9
 
-# Dependencies
+## Dependencies
 - [GSON](https://github.com/google/gson)
 - [JUnit 4](https://mvnrepository.com/artifact/junit/junit/4.12)
 - [Spring Boot](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-tools/spring-boot-maven-plugin)
