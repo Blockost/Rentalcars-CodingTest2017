@@ -44,7 +44,7 @@ public class VehiclesController {
 
     @RequestMapping(path = "/scores", method = RequestMethod.GET)
     public List<String> getVehiclesByScore() {
-        return search.getVehiclesByScore()
+        return search.getVehiclesByScoreDESC()
             .stream()
             .map(v -> String.format("%s - %d - %.2f - %.2f",
                 v.getName(), v.getScore(), v.getRating(), v.getSumScores()))

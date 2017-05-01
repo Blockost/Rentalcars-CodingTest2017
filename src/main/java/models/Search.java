@@ -43,7 +43,7 @@ public class Search {
     }
 
 
-    public List<Vehicle> getVehiclesByScore() {
+    public List<Vehicle> getVehiclesByScoreDESC() {
         VehicleList.sort(Comparator.comparing(Vehicle::getSumScores).reversed());
         return VehicleList;
     }
