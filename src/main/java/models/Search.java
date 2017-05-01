@@ -27,20 +27,19 @@ public class Search {
         return VehicleList;
     }
 
-    //TODO Check function's expected behaviour
+
     public List<Vehicle> getHighestRatedSupplier() {
-
-        /*VehicleList.sort(Comparator
-            .comparing(Vehicle::getCarType)
-            .thenComparing(Comparator.comparing(Vehicle::getRating).reversed()));*/
-
-        //VehicleList.sort(Comparator.comparing(Vehicle::getRating).reversed());
 
         Map<String, Optional<Vehicle>> vehiclesPerCarType = VehicleList.stream()
             .collect(Collectors.groupingBy(Vehicle::getCarType,
                 Collectors.maxBy(Comparator.comparing(Vehicle::getRating))));
 
-        return VehicleList;
+        return vehiclesPerCarType.values()
+            .stream()
+            .filter(v -> v.isPresent())
+            .map(v -> v.get())
+            .sorted(Comparator.comparing(Vehicle::getRating).reversed())
+            .collect(Collectors.toList());
     }
 
 

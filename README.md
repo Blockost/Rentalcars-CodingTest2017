@@ -3,9 +3,9 @@
 ## Getting started
 ### Using Maven
 
-    mvn install
-    mvn package
-    java -jar target/Rentalcars-CodingTest2017-1.0.jar
+    $ mvn install
+    $ mvn clean package
+    $ java -jar target/Rentalcars-CodingTest2017-1.0.jar
     
 or simply 
 
