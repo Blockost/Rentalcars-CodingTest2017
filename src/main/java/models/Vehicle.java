@@ -1,3 +1,7 @@
+package models;
+
+import helpers.SIPPHelper;
+
 /**
  * Created by blockost on 27/04/17.
  */
@@ -106,7 +110,7 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return "Vehicle{" +
+        return "models.Vehicle{" +
             "sipp='" + sipp + '\'' +
             ", name='" + name + '\'' +
             ", price=" + price +
