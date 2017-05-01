@@ -1,4 +1,7 @@
+package helpers;
+
 import com.google.gson.*;
+import models.Vehicle;
 
 import java.lang.reflect.Type;
 

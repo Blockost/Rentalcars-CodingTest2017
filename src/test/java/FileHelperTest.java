@@ -1,3 +1,4 @@
+import helpers.FileHelper;
 import org.junit.Test;
 
 import java.io.BufferedReader;
