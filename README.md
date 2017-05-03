@@ -69,5 +69,5 @@ When the server is fully started, you can browse to `localhost:8080/vehicles/` a
 - [JUnit 4](https://mvnrepository.com/artifact/junit/junit/4.12)
 - [Spring Boot](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-tools/spring-boot-maven-plugin)
 
-Dependencies were managed via Maven. However, these libs will be included in this project if you don't want to use Maven.
+Dependencies were managed via Maven. However, all libraries inside `${target_jar}/BOOT-INF/lib/` were copied into the `lib` folder as requested (using Maven to download and add to classpath the libraries is still highly recommended).
 
