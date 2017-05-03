@@ -16,6 +16,11 @@ import org.springframework.context.annotation.ComponentScan;
 public class RESTApp {
     public static Search search;
 
+    /**
+     * Web service startup
+     *
+     * @param args
+     */
     public static void main(String[] args) {
 
         search = FileHelper.fromJson("data/vehicles.json");

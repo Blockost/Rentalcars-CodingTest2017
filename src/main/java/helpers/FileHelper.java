@@ -13,6 +13,12 @@ import java.io.*;
  */
 public class FileHelper {
 
+    /**
+     * Create a new Buffer for the file specified in @param filepath
+     *
+     * @param filepath path leading to the file
+     * @return a ReaderBuffer for the specified path
+     */
     public static BufferedReader readFile(String filepath) {
         BufferedReader reader = null;
 
@@ -28,6 +34,11 @@ public class FileHelper {
         return reader;
     }
 
+    /**
+     * Helper function to read a JSON file
+     * @param filepath path leading to the JSON file
+     * @return A Search element (enclosing structure for Rentalcars vehicles file)
+     */
     public static Search fromJson(String filepath) {
         Search search = null;
 

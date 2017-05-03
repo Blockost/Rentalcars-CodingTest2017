@@ -1,6 +1,9 @@
 # Rentalcars-CodingTest2017
 
 ## Getting started
+
+You need to have Java 8 ([JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)) installed on your machine.
+
 ### Using Maven
 
     $ mvn install

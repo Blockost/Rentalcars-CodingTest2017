@@ -34,8 +34,7 @@ public class Search {
             .collect(Collectors.groupingBy(Vehicle::getCarType,
                 Collectors.maxBy(Comparator.comparing(Vehicle::getRating))));
 
-        return vehiclesPerCarType.values()
-            .stream()
+        return vehiclesPerCarType.values().stream()
             .filter(v -> v.isPresent())
             .map(v -> v.get())
             .sorted(Comparator.comparing(Vehicle::getRating).reversed())

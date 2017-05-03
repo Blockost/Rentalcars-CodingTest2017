@@ -17,26 +17,24 @@ import static app.RESTApp.search;
 @RequestMapping("/vehicles")
 public class VehiclesController {
 
+
     @RequestMapping(path = "/list", method = RequestMethod.GET)
     public List<String> getVehicles() {
-        return search.getVehiclesByPriceASC()
-            .stream()
+        return search.getVehiclesByPriceASC().stream()
             .map(v -> String.format("%s - %.2f", v.getName(), v.getPrice()))
             .collect(Collectors.toList());
     }
 
     @RequestMapping(path = "/specs", method = RequestMethod.GET)
     public List<String> getVehiclesSpec() {
-        return search.getVehicles()
-            .stream()
+        return search.getVehicles().stream()
             .map(v -> v.getSpec())
             .collect(Collectors.toList());
     }
 
     @RequestMapping(path = "/suppliers", method = RequestMethod.GET)
     public List<String> getHighestRatedSupplier() {
-        return search.getHighestRatedSupplier()
-            .stream()
+        return search.getHighestRatedSupplier().stream()
             .map(v -> String.format("%s - %s - %s - %.2f",
                 v.getName(), v.getCarType(), v.getSupplier(), v.getRating()))
             .collect(Collectors.toList());
@@ -44,8 +42,7 @@ public class VehiclesController {
 
     @RequestMapping(path = "/scores", method = RequestMethod.GET)
     public List<String> getVehiclesByScore() {
-        return search.getVehiclesByScoreDESC()
-            .stream()
+        return search.getVehiclesByScoreDESC().stream()
             .map(v -> String.format("%s - %d - %.2f - %.2f",
                 v.getName(), v.getScore(), v.getRating(), v.getSumScores()))
             .collect(Collectors.toList());
